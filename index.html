@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalized Propaganda</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.4/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.4/vfs_fonts.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="iframe-wrapper" class="wrapper"><iframe></iframe></div>
+        <div class="wrapper form-wrapper">
+            <button id="preview">Voorbeeld</button>
+            <form class="image-selection">
+                <label>Geen<input type="radio" id="none" name="image" value="none" checked="checked"></label>
+                <label>December<input type="radio" id="kerst" name="image" value="december"></label>
+            </form>
+            <div id="form-list"></div>
+            <a id="addline-button" class="add-button">Regel Toevoegen +</a>
+        </div>
+    </main>
+    <footer></footer>
+    <template id="line-form-template">
+        <div class="line-wrapper">
+        <form class="line-form">
+            <label><span>Hoofdtekst</span><input class="header" type="text"></label>
+            <label><span>Subtekst</span><input class="subheader" type="text"></label>
+            <label><span>Prijs</span><input class="price" type="text"></label>
+            <div class="action-buttons">
+                <a class="copy">Copy</a>
+                <a class="delete">Delete</a>
+                <span class="index"></span>
+            </div>
+        </form>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
